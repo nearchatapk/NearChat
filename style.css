@@ -132,14 +132,18 @@ nav {
 
 /* ========== HERO ========== */
 .hero {
-  padding: 140px 0 80px;
+  padding: 120px 0 60px;
   text-align: center;
   color: #fff;
 }
 
+.hero .container {
+  padding: 0 20px;
+}
+
 .hero h1 {
   font-weight: 800;
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
   background: linear-gradient(45deg, #fff, #a8edea);
   -webkit-background-clip: text;
@@ -147,9 +151,9 @@ nav {
 }
 
 .hero p {
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin-bottom: 2rem;
-  max-width: 650px;
+  max-width: 600px;
   margin-inline: auto;
   opacity: 0.9;
 }
@@ -158,25 +162,27 @@ nav {
   display: inline-block;
   background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
   color: #fff;
-  padding: 14px 36px;
+  padding: 12px 32px;
   border-radius: 50px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
 }
 
 .download-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.45);
+  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.45);
 }
 
 /* ========== FEATURES ========== */
 .features {
-  padding: 80px 0;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  padding: 60px 0;
+}
+
+.features .container {
+  padding: 0 20px;
 }
 
 .features-grid {
@@ -187,7 +193,7 @@ nav {
 
 .feature-card {
   background: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: 18px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -200,76 +206,32 @@ nav {
 }
 
 .feature-icon {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .feature-card h3 {
   font-weight: 600;
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
 }
 
 /* ========== FEEDBACK FORM ========== */
 .feedback {
-  padding: 80px 0;
-  color: #fff;
+  padding: 60px 0;
+}
+
+.feedback .container {
+  padding: 0 20px;
 }
 
 .feedback-form {
   max-width: 600px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.12);
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: 18px;
   backdrop-filter: blur(10px);
-}
-
-.form-group {
-  margin-bottom: 1.3rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.92);
-  font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-}
-
-.form-group textarea {
-  height: 120px;
-  resize: vertical;
-}
-
-.submit-btn {
-  background: linear-gradient(45deg, #4ecdc4, #44a08d);
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 100%;
-  transition: all 0.3s;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(78, 205, 196, 0.35);
 }
 
 /* ========== FOOTER ========== */
@@ -281,41 +243,11 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* ========== SUCCESS MESSAGE ========== */
-.success-message {
-  display: none;
-  background: linear-gradient(45deg, #4ecdc4, #44a08d);
-  color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* ========== ANIMATIONS ========== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.feature-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.feature-card:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
 /* ========== RESPONSIVE NAV ========== */
 @media (max-width: 900px) {
   .nav-links {
     position: absolute;
-    top: 65px; /* below header */
+    top: 65px;
     right: 0;
     width: 100%;
     background: rgba(28, 42, 58, 0.95);
@@ -323,7 +255,7 @@ footer {
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem 0;
-    display: none; /* hidden by default */
+    display: none;
   }
 
   .nav-links.active {
@@ -332,5 +264,17 @@ footer {
 
   .hamburger {
     display: flex;
+  }
+
+  .hero {
+    padding: 100px 0 50px;
+  }
+
+  .features {
+    padding: 50px 0;
+  }
+
+  .feedback {
+    padding: 50px 0;
   }
 }
