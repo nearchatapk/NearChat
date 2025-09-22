@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NearChat - Offline Messaging Revolution</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="logo">
+          <div class="logo-icon"></div>
+          NearChat
+        </a>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Nav Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Chat With People Nearby</h1>
+        <p>
+          Experience seamless offline messaging with Bluetooth technology.
+          Connect with nearby friends and family without needing WiFi or mobile
+          data. Privacy-focused, secure, and always available.
+        </p>
+        <a href="#" class="download-btn" id="downloadBtn">
+          📱 Download NearChat Now
+        </a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2
+          style="
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+          "
+        >
+          Why Choose NearChat?
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔵</div>
+            <h3>Bluetooth Technology</h3>
+            <p>
+              Advanced Bluetooth connectivity ensures reliable communication
+              within range, no internet required.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy First</h3>
+            <p>
+              Your messages stay between you and your contacts. No servers, no
+              data collection, complete privacy.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Google API Integration</h3>
+            <p>
+              Enhanced with Google services for improved functionality while
+              maintaining offline capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="feedback">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem">
+          We'd Love Your Feedback
+        </h2>
+        <div class="feedback-form">
+          <div class="success-message" id="successMessage">
+            ✅ Thank you for your feedback! We'll get back to you soon.
+          </div>
+          <form id="feedbackForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us what you think about NearChat or report any issues..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Feedback</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          <p>
+            &copy; 2025 NearChat. All rights reserved. | Offline Messaging
+            Revolution
+          </p>
+          <p>Developed by Team ReVolve with love❤️</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
