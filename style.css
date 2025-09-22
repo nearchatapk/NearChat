@@ -5,11 +5,16 @@
   box-sizing: border-box;
 }
 
-/* Import Funnel Display Font */
-@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+/* ========== CUSTOM FONT ========== */
+@font-face {
+  font-family: "BOLD";
+  src: url("fonts/BOLD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  font-family: "Funnel Display", sans-serif;
+  font-family: "BOLD", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: #fff;
@@ -33,7 +38,7 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between; /* logo left, links right */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -50,23 +55,30 @@ nav {
   margin-left: 0;
 }
 
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, #8b7bd8, #a68bf7);
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  position: relative;
+/* Logo Image */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  filter: brightness(1.1);
 }
 
-.logo-icon::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: -9px;
-  width: 18px;
-  height: 22px;
-  background: linear-gradient(135deg, #8b7bd8, #a68bf7);
-  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+/* Neon Gradient Glow on Hover */
+.logo-img:hover {
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+  transform: scale(1.15);
+}
+
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 5px #8b7bd8, 0 0 10px #8b7bd8, 0 0 20px #a68bf7,
+      0 0 30px #a68bf7, 0 0 40px #fff;
+  }
+  100% {
+    box-shadow: 0 0 10px #8b7bd8, 0 0 20px #8b7bd8, 0 0 30px #a68bf7,
+      0 0 40px #a68bf7, 0 0 50px #fff;
+  }
 }
 
 /* Nav Links */
@@ -89,7 +101,7 @@ nav {
   opacity: 0.75;
 }
 
-/* Hamburger (mobile only) */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
