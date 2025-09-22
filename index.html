@@ -7,6 +7,22 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="app.png" />
+
+    <!-- ========== Open Graph / Social Preview ========== -->
+    <!-- Facebook, WhatsApp, etc. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nearchatapk.github.io/NearChat/" />
+    <meta property="og:title" content="NearChat" />
+    <meta property="og:description" content="Chat offline with friends using mesh networking." />
+    <meta property="og:image" content="https://nearchatapk.github.io/NearChat/app.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NearChat" />
+    <meta name="twitter:description" content="Chat offline with friends using mesh networking." />
+    <meta name="twitter:image" content="https://nearchatapk.github.io/NearChat/app.png" />
   </head>
   <body>
     <!-- ========== HEADER ========== -->
@@ -60,18 +76,29 @@
     <!-- ========== FEEDBACK FORM ========== -->
     <section class="feedback" id="feedback">
       <form class="feedback-form" id="feedbackForm">
-        <div class="success-message" id="successMessage">Thanks for your feedback!</div>
+        <div class="success-message" id="successMessage">
+          Thanks for your feedback!
+        </div>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your Name" />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+          />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your Message"></textarea>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+          ></textarea>
         </div>
         <button type="submit" class="submit-btn">Submit</button>
       </form>
@@ -98,19 +125,21 @@
       // =======================
       // Download button (Google Drive direct download)
       // =======================
-      document.getElementById("downloadBtn").addEventListener("click", function (e) {
-        e.preventDefault();
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
 
-        const fileId = "1Mfg2bWL2efZHcYZKQhVzHx_oXSCVk7lc";
-        const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+          const fileId = "1Mfg2bWL2efZHcYZKQhVzHx_oXSCVk7lc";
+          const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
-        const a = document.createElement("a");
-        a.href = downloadUrl;
-        a.download = "NearChat.apk"; // optional: custom filename
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      });
+          const a = document.createElement("a");
+          a.href = downloadUrl;
+          a.download = "NearChat.apk"; // optional: custom filename
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
     </script>
   </body>
 </html>
