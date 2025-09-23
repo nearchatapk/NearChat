@@ -16,24 +16,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Download button functionality (Google Drive direct download)
-document.getElementById("downloadBtn").addEventListener("click", function (e) {
-  e.preventDefault();
-
-  // Google Drive file ID
-  const fileId = "1Mfg2bWL2efZHcYZKQhVzHx_oXSCVk7lc";
-
-  // Direct download link
-  const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
-
-  // Trigger download
-  const a = document.createElement("a");
-  a.href = downloadUrl;
-  a.download = "NearChat.apk"; // optional: custom filename
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-});
 
 // Feedback form handling
 document
