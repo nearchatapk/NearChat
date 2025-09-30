@@ -3,263 +3,181 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NearChat - Connect Without Internet</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="icon" type="image/png" href="app.png" />
+    <title>Meet Our Team - NearChat</title>
+    <link rel="stylesheet" href="team.css" />
   </head>
   <body>
-    <!-- Floating Particles -->
-    <div class="particles" id="particles"></div>
-
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <div class="logo">
-            <img src="image/app.png" alt="NearChat Logo" class="logo-img" />
-            <h1>NearChat</h1>
-          </div>
-          <div class="hamburger" onclick="toggleMobileMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="#feedback">Feedback</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-      <div class="container">
-        <ul>
-          <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
-          <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
-          <li><a href="team.html" onclick="closeMobileMenu()">Team</a></li>
-          <li><a href="#feedback" onclick="closeMobileMenu()">Feedback</a></li>
-        </ul>
-      </div>
+    <!-- Back Button -->
+    <div class="back-button-container">
+      <button class="back-button" onclick="goHome()">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M19 12H6m0 0l6 6m-6-6l6-6" />
+        </svg>
+        <span>Back to Home</span>
+      </button>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h2>Welcome To NearChat</h2>
-            <p>
-              NearChat uses revolutionary mesh networking technology to keep you
-              connected with people nearby, even when there's no internet or
-              cellular service. Chat, share, and communicate in any situation.
-            </p>
-            <a
-              href="https://www.mediafire.com/file/2pyrksbx6gnb857/NearChat.apk/file"
-              class="download-btn"
-              onclick="downloadApp()"
-            >
-              <i class="fas fa-download"></i>
-              Download NearChat
-            </a>
+    <div class="container">
+      <div class="header">
+        <h1>Meet our beautiful team</h1>
+        <p>
+          Our philosophy is simple; hire great people and give them the
+          resources and support to do their best work building NearChat.
+        </p>
+      </div>
+
+      <div class="team-carousel-container">
+        <button class="carousel-nav prev" onclick="prevSlide()">‹</button>
+        <button class="carousel-nav next" onclick="nextSlide()">›</button>
+
+        <div class="team-carousel" id="teamCarousel">
+          <div class="team-slide active">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/dev.png"
+                  alt="Dev"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder dev" style="display: none">D</div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Dev</h3>
+                <p class="member-role">Full-Stack Developer</p>
+              </div>
+            </div>
           </div>
-          <div class="hero-visual">
-            <div class="phone-mockup">
-              <div class="phone-screen">
-                <div class="app-interface">
-                  <div class="status-bar">
-                    <span class="time">9:41</span>
-                    <div class="status-icons">
-                      <i class="fas fa-signal"></i>
-                      <i class="fas fa-wifi"></i>
-                      <i class="fas fa-battery-three-quarters"></i>
-                    </div>
-                  </div>
-                  <div class="app-header">
-                    <img src="image/app.png" alt="NearChat" class="app-logo" />
-                    <h3>NearChat</h3>
-                    <div class="connection-status">
-                      <div class="status-dot"></div>
-                      <span>3 nearby devices</span>
-                    </div>
-                  </div>
-                  <div class="chat-preview">
-                    <div class="chat-item">
-                      <div class="chat-avatar">
-                        <i class="fas fa-user"></i>
-                      </div>
-                      <div class="chat-info">
-                        <div class="chat-name">Nearby Peoples</div>
-                        <div class="chat-message">Hey! how are you doing?</div>
-                      </div>
-                      <div class="chat-time">2m</div>
-                    </div>
-                    <div class="chat-item">
-                      <div class="chat-avatar">
-                        <i class="fas fa-users"></i>
-                      </div>
-                      <div class="chat-info">
-                        <div class="chat-name">Local Group</div>
-                        <div class="chat-message">Welcome to the mesh!</div>
-                      </div>
-                      <div class="chat-time">5m</div>
-                    </div>
-                  </div>
-                  <div class="mesh-indicator">
-                    <div class="mesh-nodes">
-                      <div class="node active"></div>
-                      <div class="node active"></div>
-                      <div class="node"></div>
-                      <div class="node active"></div>
-                    </div>
-                    <span class="mesh-text">Mesh Network Active</span>
-                  </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/bharti.png"
+                  alt="Bharti"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder bharti" style="display: none">
+                  B
                 </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Bharti</h3>
+                <p class="member-role">Backend Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/ishan.png"
+                  alt="Ishan"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder ishan" style="display: none">
+                  I
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Ishan</h3>
+                <p class="member-role">Mobile Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/ishika.png"
+                  alt="Ishika"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder ishika" style="display: none">
+                  I
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Ishika</h3>
+                <p class="member-role">Frontend Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/altamash.jpg"
+                  alt="Altamash"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder altamash" style="display: none">
+                  A
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Altamash</h3>
+                <p class="member-role">DevOps Engineer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-slide">
+            <div class="team-member">
+              <div class="member-photo">
+                <img
+                  src="image/aarav.png"
+                  alt="Aarav"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="photo-placeholder aarav" style="display: none">
+                  A
+                </div>
+              </div>
+              <div class="member-overlay">
+                <h3 class="member-name">Aarav</h3>
+                <p class="member-role">QA Engineer</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-      <div class="container">
-        <h2 class="section-title">Powerful Features</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-wifi"></i>
-            </div>
-            <h3>Mesh Networking</h3>
-            <p>
-              Create a network with nearby devices without internet or cellular
-              connection. Messages hop through multiple devices to reach their
-              destination.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3>End-to-End Encrypted</h3>
-            <p>
-              Your messages are secured with military-grade encryption, ensuring
-              privacy and security in all communications.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <h3>Group Conversations</h3>
-            <p>
-              Create group chats with people in your mesh network. Perfect for
-              events, emergencies, or just staying connected.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-paper-plane"></i>
-            </div>
-            <h3>Instant Delivery</h3>
-            <p>
-              Messages are delivered instantly through the mesh network, with
-              smart routing to find the best path to recipients.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-battery-full"></i>
-            </div>
-            <h3>Battery Optimized</h3>
-            <p>
-              Designed to minimize battery usage while maintaining strong
-              connections with nearby devices.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-globe"></i>
-            </div>
-            <h3>Works Anywhere</h3>
-            <p>
-              Perfect for remote areas, natural disasters, large events, or
-              anywhere traditional networks fail.
-            </p>
+        <div class="carousel-dots">
+          <div class="dot active" onclick="currentSlide(1)"></div>
+          <div class="dot" onclick="currentSlide(2)"></div>
+          <div class="dot" onclick="currentSlide(3)"></div>
+          <div class="dot" onclick="currentSlide(4)"></div>
+          <div class="dot" onclick="currentSlide(5)"></div>
+          <div class="dot" onclick="currentSlide(6)"></div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "We've been blown away by the support from NearChat team. We suggested
+          an improvement to our chat system and they implemented it in a few
+          days!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar"></div>
+          <div class="author-info">
+            <h4>Team ReVolve</h4>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Feedback Section -->
-    <section id="feedback" class="feedback">
-      <div class="container">
-        <h2 class="section-title">Send Us Feedback</h2>
-        <form class="feedback-form" onsubmit="submitFeedback(event)">
-          <div class="form-group">
-            <label for="name">Name *</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="your@email.com"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Tell us what you think..."
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="submit-btn">
-            <i class="fas fa-paper-plane"></i>
-            Send Feedback
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 NearChat | with love Team reVolve 🖥️❤️</p>
-      </div>
-    </footer>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <h3 id="modal-title">Thank You!</h3>
-        <p id="modal-message">Your feedback has been sent successfully.</p>
-        <button class="modal-close" onclick="closeModal()">Close</button>
-      </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="team.js"></script>
   </body>
 </html>
