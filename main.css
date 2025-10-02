@@ -106,7 +106,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; /* Minimal edge padding - adjust to 10px or 15px for even closer to edges */
+  padding: 12px 20px; /* Minimal edge padding - adjust to 10px or 15px for even closer to edges */
   width: 100%;
   box-sizing: border-box;
 }
