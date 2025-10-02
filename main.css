@@ -848,66 +848,66 @@ footer {
   }
 }
 
- header {
-            padding: 2rem;
-            text-align: center;
-        }
+footer {
+  padding: 2rem;
+  text-align: center;
+}
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
 
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        footer {
-            background-color: #1c2a3a;
-            border-top: 1px solid #24364c;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+footer {
+  background-color: #1c2a3a;
+  border-top: 1px solid #24364c;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        .footer-text {
-            color: #666;
-            font-size: 0.75rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
+.footer-text {
+  color: #666;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 
-        .footer-icons {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
 
-        .footer-icons a {
-            color: #666;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+.footer-icons a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
 
-        .footer-icons a:hover {
-            color: #999;
-        }
+.footer-icons a:hover {
+  color: #999;
+}
 
-        .footer-icons svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
+.footer-icons svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
 
-        @media (max-width: 768px) {
-            footer {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-        }
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
